@@ -12,5 +12,5 @@
 hs_err_pid*
 .nb-gradle/
 .gradle/
-nb-gradle-properties*
+.nb-gradle-properties
 build/
