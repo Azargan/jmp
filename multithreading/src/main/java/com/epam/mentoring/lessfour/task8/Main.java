@@ -16,8 +16,8 @@ import java.util.concurrent.Future;
  */
 public class Main {
 
-    private static String EXIT_COMMAND = "!quit";
-    private static String CANCEL_COMMAND = "!cancel";
+    private static final String EXIT_COMMAND = "!quit";
+    private static final String CANCEL_COMMAND = "!cancel";
     private static boolean running = false;
 
     public static void main(String[] args) {
