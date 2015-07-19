@@ -10,3 +10,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/jboss/jboss-ejb/target/
+/jboss/jboss-web/target/
+/jboss/jboss-ear/target/
+/WebAppDemo/nbproject/private/
+/WebAppDemo/build/
+/WebApplication/nbproject/private/
+/WebApplication/build/
+/jboss-jmx/jboss-jmx/jboss-jmx-ejb/target/
+/jboss-jmx/jboss-jmx/jboss-jmx-web/target/
+/jboss-jmx/jboss-jmx/jboss-jmx-ear/target/
+/jboss-jmx/jboss-jmx/jboss-jmx-api/target/
