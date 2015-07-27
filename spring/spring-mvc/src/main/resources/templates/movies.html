@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Movies</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1>Movies list</h1>
+
+<table>
+    <tr>
+        <th>Кино</th>
+        <th>Начало</th>
+    </tr>
+    <tr th:each="movie : ${movies}">
+        <td>
+            <a href="movie.html" th:href="@{/movie/{movieId}/(movieId=${movie.id})}" th:text="${movie.title}"></a>
+        </td>
+        <td th:text="${#dates.format(movie.beginning)}">yes</td>
+    </tr>
+</table>
+
+</body>
+
+</html>

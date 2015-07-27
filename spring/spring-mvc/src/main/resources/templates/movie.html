@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="'Movie: ' + ${movie.title}">Movie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div id="movie-header">
+    <h1 th:text="'Кино: ' + ${movie.title}"></h1>
+    <h2 th:text="'Начало сеанса: ' + ${#dates.format(movie.beginning)}"></h2>
+</div>
+
+<div>
+    Брони:<br/>
+    <span th:each="reservation : ${reservations}">
+        <a href="reservation.html" th:text="${reservation.id} + '. Место: ' + ${reservation.place}">Бронь</a>&#nbsp;
+        <a href="reservation.html" th:href="@{/reservation/{id}/delete(id=${reservation.id})}">x</a>
+    </span>
+</div>
+
+<div>
+    <a href="reservation.html" th:href="@{/movie/{id}/reservation(id=${movie.id})}">Add reservation</a>
+</div>
+
+<div><a href="movies.html" th:href="@{/movie}">To Movies list</a></div>
+
+</body>
+
+</html>

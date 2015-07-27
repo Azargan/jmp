@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="'Movie: ' + ${movie.title}">Movie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<form action="reservation.html" th:attr="action=@{/movie/{id}/reservation(id=${movie.id})}" method="post">
+    <fieldset>
+        <input type="text" name="place" />
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="submit" value="Reserve"/>
+    </fieldset>
+</form>
+
+</body>
+</html>
